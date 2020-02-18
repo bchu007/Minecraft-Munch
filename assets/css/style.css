@@ -1,0 +1,301 @@
+body {
+    width: 98vw;
+    height: 95vh;
+    font-weight: bold;
+    /* background-image: url(../images/minecraft/mc_background.jpg); */
+    background-color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: url(../images/minecraft/hand.png) 5 5, auto;
+}
+
+header {
+    border: black thick solid;
+    background-color: rgba(50,50,50,.5);;
+    color: white;
+    text-decoration: black;
+    text-align: center;
+    font-size: 60px;
+    padding: 1%;
+    margin: 2%;
+    margin-bottom: 0;
+    height: 8%;
+    width: 90%;
+}
+
+
+aside h1 {
+    text-align: center;
+    font-size: 26pt;
+    color: white;
+}
+
+aside {
+    /* float: right; */
+    background-color: rgba(50,50,50,.5);
+    width: 36.5vw;
+    height:70%;
+    display: inline-block;
+    padding: 1%;
+    border: black thick solid;
+    vertical-align: top;
+    font-size: 1.3rem;
+    margin: 2%;
+
+    
+}
+
+
+.stats {
+    background-color: silver;
+    border: black thick solid;
+    padding: 1%;
+    margin: 1%;  
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.value {
+    background-color: white;
+}
+
+main {
+    background-color: rgba(50,50,50,.5);;
+    width: 50%;
+    height: 77%;
+    border: black solid thick;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2%;
+    margin-left: 0;
+    margin-bottom: 1%;
+}
+
+.container {
+    margin: 3%;
+    
+}
+
+.row {
+    width: 100%;
+    height: 9vh;
+    padding: 1%;
+}
+
+.card {
+    width: 6.5vw;
+    height: 100%;
+    /* background-color: black; */
+    border: solid black thick;
+    display: inline-block;
+    margin-left: 0.5%;
+    position: relative;
+}
+
+.card *{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.lfz-card {
+    background-color: rgba(50,50,50,.5);
+}
+
+.lfz-back {
+    /* background-image: url(../images/lfz-card.jpg); */
+    background-color: darkgreen;
+}
+
+.apple {
+    background-image: url(../images/minecraft/mc_apple.png);
+}
+
+.bakedpotato {
+    background-image: url(../images/minecraft/mc_baked_potato.png);
+}
+
+.beetroot {
+    background-image: url(../images/minecraft/mc_beetroot.png);
+}
+
+.bread {
+    background-image: url(../images/minecraft/mc_bread.png);
+}
+
+.cake {
+    background-image: url(../images/minecraft/mc_cake.png);
+}
+
+.carrot {
+    background-image: url(../images/minecraft/mc_carrot.png);
+}
+
+.cookedcod {
+    background-image: url(../images/minecraft/mc_cooked_cod.png);
+}
+
+.cookedmutton {
+    background-image: url(../images/minecraft/mc_cooked_mutton.png);
+}
+
+.cookedporkchop {
+    background-image: url(../images/minecraft/mc_cooked_porkchop.png);
+}
+
+.cookedrabbit {
+    background-image: url(../images/minecraft/mc_cooked_rabbit.png);
+}
+
+.cookedsalmon {
+    background-image: url(../images/minecraft/mc_cooked_salmon.png);
+}
+
+.cookie {
+    background-image: url(../images/minecraft/mc_cookie.png);
+}
+
+.driedkelp {
+    background-image: url(../images/minecraft/mc_dried_kelp.png);
+}
+
+.goldenapple {
+    background-image: url(../images/minecraft/mc_golden_apple.png);
+}
+
+.goldencarrot {
+    background-image: url(../images/minecraft/mc_golden_carrot.png);
+}
+
+.melonslice {
+    background-image: url(../images/minecraft/mc_melon_slice.png);
+}
+
+.mushroomstew {
+    background-image: url(../images/minecraft/mc_mushroon_stew.png);
+}
+
+.poisonouspotato {
+    background-image: url(../images/minecraft/mc_poisonous_potato.png);
+}
+
+.potato {
+    background-image: url(../images/minecraft/mc_potato.png); 
+}
+
+.pumpkinpie {
+    background-image: url(../images/minecraft/mc_pumpkin_pie.png);
+}
+
+.steak {
+    background-image: url(../images/minecraft/mc_steak.png);
+}
+
+.suspiciousstew {
+    background-image: url(../images/minecraft/mc_suspicious_stew.png);
+}
+
+.sweetberries {
+    background-image: url(../images/minecraft/mc_sweet_berries.png);
+}
+
+.dan {
+    background-image: url(../images/dan.jpg);
+}
+
+
+.bill {
+    background-image: url(../images/bill.jpg);
+}
+
+.brett {
+    background-image: url(../images/brett.jpg);
+}
+
+.cody {
+    background-image: url(../images/cody.jpg);
+}
+
+.scott {
+    background-image: url(../images/scott.jpg);
+}
+
+.tim-d {
+    background-image: url(../images/tim-d.jpg);
+}
+
+.tim-h {
+    background-image: url(../images/tim-h.jpg);
+}
+
+.tj {
+    background-image: url(../images/tj.jpg);
+}
+
+
+.forest {
+    background-image: url(../images/minecraft/tile_forest.jpg);
+}
+
+.manor {
+    background-image: url(../images/minecraft/tile_manor.jpg);
+}
+
+.house {
+    background-image: url(../images/minecraft/tile_house.png);
+}
+
+.treasure {
+    background-image: url(../images/minecraft/tile_treasure.jpg);
+}
+
+#hunger-value {
+    
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    width: 30vw;
+    height: 10vh;
+    margin: 18% 30%;
+    overflow: auto;
+    padding: 3%;
+    background-color: yellow;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border: black thick solid;
+    border-radius: 8px;
+    
+}
+
+.death-modal {
+    position: fixed;
+    z-index: 1;
+    width: 30vw;
+    height: 10vh;
+    margin: 18% 30%;
+    overflow: auto;
+    padding: 3%;
+    background-color: black;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border: white thick solid;
+    border-radius: 8px;
+    color: white;
+    
+}
+
+.modal-content {
+    margin: auto;
+}
+
+
+.hidden {
+    display: none;
+}

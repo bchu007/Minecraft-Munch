@@ -1,0 +1,214 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Match - Brian Chu</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script> 
+</head>
+<body>
+    <div class="modal hidden">
+        <div class="modal-content">
+            <div>Congradulations You have Won!!!</div>
+            <button id="replay">Replay</button>
+        </div>
+        
+    </div>
+    <div class="death-modal hidden">
+            <div class="modal-content">
+                <div>You died :(</div>
+                <button id="death">Replay</button>
+            </div>
+            
+        </div>
+    <div id="game">
+        <header>Minecraft Munch</header>
+        <aside>
+            <h1>Stats</h1>
+            <div class="stats" id="health">Health
+                <div class="stats value" id="health-value"></div>
+            </div>
+            
+            <div class="stats" id="hunger">Hunger
+                <div class="stats value" id="hunger-value"></div>
+            </div>
+            
+            <div class="stats" id="games-played">Games Played
+                <div class="stats value" id="games-played-value">0</div>
+            </div>
+            
+            <div class="stats" id="attempt">Attempts
+                <div class="stats value" id="attempt-value">0</div>
+            </div>
+            
+            <div class="stats" id="accuracy">Accuracy
+                <div class="stats value" id="accuracy-value">0</div>
+            </div>
+            
+        </aside>
+        <main>
+            <div class="container">
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div>    
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div>    
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div> 
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div>  
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div>  
+                <div class='row'>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div> 
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>
+                    <div class='card'>
+                        <div class='lfz-card'></div>
+                        <div class='lfz-back'></div>
+                    </div>   
+                </div>             
+            </div>
+        </main>
+    </div>
+    
+    
+    
+</body>
+</html>
