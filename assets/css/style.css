@@ -366,12 +366,9 @@ button {
 
     }
 
-
-}
-
-@media (pointer:none), (pointer:coarse) {
-
     .modal, .death-modal {
-        top: 60vh;
+        bottom: 25vh;
     }
+
 }
+\
