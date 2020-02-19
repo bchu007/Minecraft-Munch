@@ -6,7 +6,7 @@ body {
     background-color: aqua;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     cursor: url(../images/minecraft/hand.png) 5 5, auto;
 }
 
@@ -43,7 +43,7 @@ aside {
     font-size: 1.3rem;
     margin: 2%;
 
-    
+
 }
 
 
@@ -51,7 +51,7 @@ aside {
     background-color: silver;
     border: black thick solid;
     padding: 1%;
-    margin: 1%;  
+    margin: 1%;
     border-radius: 5px;
     opacity: 1;
 }
@@ -74,7 +74,7 @@ main {
 
 .container {
     margin: 3%;
-    
+
 }
 
 .row {
@@ -183,7 +183,7 @@ main {
 }
 
 .potato {
-    background-image: url(../images/minecraft/mc_potato.png); 
+    background-image: url(../images/minecraft/mc_potato.png);
 }
 
 .pumpkinpie {
@@ -252,8 +252,8 @@ main {
     background-image: url(../images/minecraft/tile_treasure.jpg);
 }
 
-#hunger-value {
-    
+#hunger-value > img , #health-value > img {
+    height: 32px
 }
 
 .modal {
@@ -270,7 +270,7 @@ main {
     justify-content: center;
     border: black thick solid;
     border-radius: 8px;
-    
+
 }
 
 .death-modal {
@@ -288,7 +288,7 @@ main {
     border: white thick solid;
     border-radius: 8px;
     color: white;
-    
+
 }
 
 .modal-content {
