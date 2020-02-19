@@ -7,13 +7,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: 'Londrina Solid', cursive;
     cursor: url(../images/minecraft/hand.png) 5 5, auto;
 }
 
 header {
     border: black thick solid;
     background-color: rgba(50,50,50,.5);;
-    color: white;
+    color: black;
     text-decoration: black;
     text-align: center;
     font-size: 60px;
@@ -28,7 +29,7 @@ header {
 aside h1 {
     text-align: center;
     font-size: 26pt;
-    color: white;
+    color: black;
 }
 
 aside {
@@ -87,7 +88,7 @@ main {
     width: 6.5vw;
     height: 100%;
     /* background-color: black; */
-    border: solid black thick;
+    border: solid black medium;
     display: inline-block;
     margin-left: 0.5%;
     position: relative;
@@ -103,11 +104,14 @@ main {
 
 .lfz-card {
     background-color: rgba(50,50,50,.5);
+    background-size: 60%;
+    background-repeat: no-repeat;
 }
 
 .lfz-back {
     /* background-image: url(../images/lfz-card.jpg); */
-    background-color: darkgreen;
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
 
 .apple {
@@ -238,18 +242,24 @@ main {
 
 .forest {
     background-image: url(../images/minecraft/tile_forest.jpg);
+    background-color: white;
+
 }
 
 .manor {
     background-image: url(../images/minecraft/tile_manor.jpg);
+    background-color: white;
+
 }
 
 .house {
     background-image: url(../images/minecraft/tile_house.png);
+    background-color: darkgreen;
 }
 
 .treasure {
     background-image: url(../images/minecraft/tile_treasure.jpg);
+    background-color: #505050;
 }
 
 #hunger-value > img , #health-value > img {
@@ -298,4 +308,54 @@ main {
 
 .hidden {
     display: none;
+}
+
+
+@media (max-width: 800px) {
+    aside {
+        display: block;
+        width: 90vw;
+        border: black medium solid;
+    }
+
+    .stats {
+        border: black medium solid;
+        font-size: 15px;
+    }
+
+    aside h1 {
+        font-size: 0px;
+    }
+    main {
+        width: 92vw;
+        height: calc(.9 * width);
+        margin: 1%;
+        border: black medium solid;
+    }
+
+    .card {
+        width: calc((92vw / 6) - 3vw);
+        height: 80%;
+    }
+
+
+    header {
+        font-size: 30px;
+    }
+
+    .mini-stats-container {
+        display: inline-flex;
+        width: 90vw;
+    }
+    .mini {
+        width: 27.5%;
+    }
+    #hunger-value > img , #health-value > img {
+        height: 17px;
+    }
+
+    .row{
+        padding: 0;
+
+    }
 }

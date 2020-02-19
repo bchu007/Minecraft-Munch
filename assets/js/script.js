@@ -123,13 +123,7 @@ function handlecardclick() {
     var select = $(event.currentTarget);
     var maxHunger, maxHealth = 15
 
-    if (flipping) {
-        //do nothing
-
-    }
-    else {
-
-
+    if (!flipping) {
         if(firstCardClicked === null) {
             $(this).addClass('hidden');
             firstCardClicked = select;
@@ -146,29 +140,22 @@ function handlecardclick() {
 
                 //game logic
                 if(firstpath !== secondpath) {
-
                     flipping = true;
-
                     setTimeout(hide, 500);
                     flipping = false;
                 }
                 else {
                     matches++;
-
                     cardsFlipped += 2;
                     healthReturn(firstCardClicked.prev());
                     setTimeout(eat, 600, firstCardClicked, secondCardClicked);
-                    firstCardClicked = null;
-                    secondCardClicked = null;
+                    firstCardClicked, secondCardClicked = null;
 
                     if(max_matches === matches) {
                         $(".modal").removeClass("hidden");
                         $('.lfz-back').off('click', handlecardclick);
                     }
                 }
-
-
-
             }
         }
 
@@ -204,7 +191,6 @@ function randomMatch(items, len) {
     while(foods.length < len/2) {
         foods = foods.concat(items)
     }
-
     var allfoods = randomizeArray(foods, Math.floor(len/2));
     allfoods = allfoods.concat(allfoods);
     allfoods = randomizeArray(allfoods, allfoods.length)
@@ -283,9 +269,7 @@ function repopulate_board() {
 function hide() {
     firstCardClicked.removeClass("hidden");
     secondCardClicked.removeClass("hidden");
-    firstCardClicked = null;
-    secondCardClicked = null;
-
+    firstCardClicked, secondCardClicked = null;
 }
 
 function calculateAccuracy() {
