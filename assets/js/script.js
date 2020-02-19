@@ -127,59 +127,60 @@ function handlecardclick() {
         //do nothing
 
     }
-    else if(firstCardClicked === null) {
-        $(this).addClass('hidden');
-        firstCardClicked = select;
-        // console.log("first", firstCardClicked);
-        energyReduction();
-
-    }
-    else if (secondCardClicked === null){
-        $(this).addClass('hidden');
-        secondCardClicked = select;
-        console.log("second", secondCardClicked);
-        energyReduction();
+    else {
 
 
-
-        if(secondCardClicked !== null) {
-            var firstpath = firstCardClicked.prev().css("background-image");
-            var secondpath = secondCardClicked.prev().css("background-image");
-            attempts++;
-
-            //game logic
-            if(firstpath !== secondpath) {
-
-                flipping = true;
-
-                setTimeout(hide, 500);
-                flipping = false;
-            }
-            else {
-                matches++;
-
-                cardsFlipped += 2;
-                healthReturn(firstCardClicked.prev());
-                setTimeout(eat, 600, firstCardClicked, secondCardClicked);
-                firstCardClicked = null;
-                secondCardClicked = null;
-
-                if(max_matches === matches) {
-                    $(".modal").removeClass("hidden");
-                    $('.lfz-back').off('click', handlecardclick);
-                }
-            }
-            displayStats();
-            if(health === 0) {
-                gameover();
-            }
-            else if (hunger == maxHunger) {
-                health = Math.min(health + 4, maxHealth);
-
-                setHealth(health);
-            }
-
+        if(firstCardClicked === null) {
+            $(this).addClass('hidden');
+            firstCardClicked = select;
         }
+        else if (secondCardClicked === null){
+            $(this).addClass('hidden');
+            secondCardClicked = select;
+
+
+            if(secondCardClicked !== null) {
+                var firstpath = firstCardClicked.prev().css("background-image");
+                var secondpath = secondCardClicked.prev().css("background-image");
+                attempts++;
+
+                //game logic
+                if(firstpath !== secondpath) {
+
+                    flipping = true;
+
+                    setTimeout(hide, 500);
+                    flipping = false;
+                }
+                else {
+                    matches++;
+
+                    cardsFlipped += 2;
+                    healthReturn(firstCardClicked.prev());
+                    setTimeout(eat, 600, firstCardClicked, secondCardClicked);
+                    firstCardClicked = null;
+                    secondCardClicked = null;
+
+                    if(max_matches === matches) {
+                        $(".modal").removeClass("hidden");
+                        $('.lfz-back').off('click', handlecardclick);
+                    }
+                }
+
+
+
+            }
+        }
+
+        energyReduction();
+        if (health === 0) {
+            gameover();
+        }
+        else if (hunger == maxHunger) {
+            health = Math.min(health + 4, maxHealth);
+            setHealth(health);
+        }
+        displayStats();
     }
 
 }
