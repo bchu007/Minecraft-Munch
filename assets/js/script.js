@@ -149,7 +149,8 @@ function handlecardclick() {
                     cardsFlipped += 2;
                     healthReturn(firstCardClicked.prev());
                     setTimeout(eat, 600, firstCardClicked, secondCardClicked);
-                    firstCardClicked, secondCardClicked = null;
+                    firstCardClicked = null;
+                    secondCardClicked = null;
 
                     if(max_matches === matches) {
                         $(".modal").removeClass("hidden");
@@ -191,6 +192,7 @@ function randomMatch(items, len) {
     while(foods.length < len/2) {
         foods = foods.concat(items)
     }
+
     var allfoods = randomizeArray(foods, Math.floor(len/2));
     allfoods = allfoods.concat(allfoods);
     allfoods = randomizeArray(allfoods, allfoods.length)
@@ -269,7 +271,9 @@ function repopulate_board() {
 function hide() {
     firstCardClicked.removeClass("hidden");
     secondCardClicked.removeClass("hidden");
-    firstCardClicked, secondCardClicked = null;
+    firstCardClicked = null;
+    secondCardClicked = null;
+
 }
 
 function calculateAccuracy() {

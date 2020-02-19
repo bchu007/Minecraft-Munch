@@ -109,7 +109,8 @@ main {
 }
 
 .lfz-back {
-    /* background-image: url(../images/lfz-card.jpg); */
+    background-image: url(../images/lfz-card.jpg);
+
     background-size: 80%;
     background-repeat: no-repeat;
 }
@@ -263,7 +264,7 @@ main {
 }
 
 #hunger-value > img , #health-value > img {
-    height: 32px
+    height: 20px
 }
 
 .modal {
@@ -310,6 +311,9 @@ main {
     display: none;
 }
 
+button {
+    font-size: 150%;
+}
 
 @media (max-width: 800px) {
     aside {
@@ -334,7 +338,7 @@ main {
     }
 
     .card {
-        width: calc((92vw / 6) - 3vw);
+        width: calc((92vw / 6) - 4vw);
         height: 80%;
     }
 
@@ -346,9 +350,11 @@ main {
     .mini-stats-container {
         display: inline-flex;
         width: 90vw;
+
     }
     .mini {
         width: 27.5%;
+        align-items: flex-end;
     }
     #hunger-value > img , #health-value > img {
         height: 17px;
@@ -356,6 +362,16 @@ main {
 
     .row{
         padding: 0;
+        text-align: center;
 
+    }
+
+
+}
+
+@media (pointer:none), (pointer:coarse) {
+
+    .modal, .death-modal {
+        top: 60vh;
     }
 }
