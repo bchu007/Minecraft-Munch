@@ -19,8 +19,17 @@
     <div class="death-modal hidden">
             <div class="modal-content">
                 <div>You died :(</div> </br>
+
                 <button id="death">Replay</button>
+                <form action="/my-handling-form-page" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                    <button type="submit">Record High Score</button>
+                </form>
+
+                <button id="leaderboard">Show Leaderboard</button>
             </div>
+
 
         </div>
     <div id="game">

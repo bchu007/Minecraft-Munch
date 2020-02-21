@@ -14,6 +14,7 @@ var hunger = 15;
 
 $(document).ready( InitalizeApp );
 
+
 function InitalizeApp() {
     repopulate_board()
     shuffleCards()
@@ -27,6 +28,7 @@ function InitalizeApp() {
 
 }
 
+
 function energyReduction() {
     hunger = Math.max(0, hunger - 1.5);
     setHunger(hunger);
@@ -36,6 +38,7 @@ function energyReduction() {
 
     }
 }
+
 
 function resetStats() {
     firstCardClicked = null;
@@ -52,11 +55,13 @@ function resetStats() {
     hunger = 15;
 }
 
+
 function death() {
     resetStats()
     $('.death-modal').addClass('hidden')
     InitalizeApp()
 }
+
 
 function healthReturn(fooditem) {
     var maxHunger = 15;
@@ -70,7 +75,6 @@ function healthReturn(fooditem) {
     setHunger(hunger);
 
 }
-
 
 
 function setHealth(health) {
@@ -93,31 +97,27 @@ function setHealth(health) {
 
 
 function setHunger(hunger) {
-
     var maxHunger = 15
     $('#hunger-value').empty();
     for(var i = 0; i < Math.floor(hunger); i++) {
         $('<img/>').attr('src', 'assets/images/minecraft/self_hunger.svg').appendTo('#hunger-value');
     }
-
     if(hunger % 1 > 0) {
         $('<img/>').attr('src', 'assets/images/minecraft/self_half_hunger.svg').appendTo('#hunger-value');
     }
-
     var empty_hunger = Math.max(0, maxHunger - hunger);
     for(var j = 0;  j < Math.floor(empty_hunger); j++) {
         $('<img/>').attr('src', 'assets/images/minecraft/self_empty_hunger.svg').appendTo('#hunger-value');
     }
 }
 
+
 function gameover() {
     repopulate_board();
-    console.log("gameover");
     $(".death-modal").removeClass("hidden");
     displayStats();
-    // $('.lfz-back').off('click', handlecardclick)
-    // $('button#death').on('click', )
 }
+
 
 function handlecardclick() {
     var select = $(event.currentTarget);
@@ -174,7 +174,6 @@ function handlecardclick() {
 }
 
 
-
 function randomizeArray(array, len) {
     var tempArr = array;
     var finalArr = [];
@@ -185,6 +184,7 @@ function randomizeArray(array, len) {
     }
     return finalArr;
 }
+
 
 function randomMatch(items, len) {
     var foods = items;
@@ -198,6 +198,7 @@ function randomMatch(items, len) {
     allfoods = randomizeArray(allfoods, allfoods.length)
     return allfoods;
 }
+
 
 function shuffleCards() {
     var item = ['apple', 'bakedpotato', 'beetroot', 'bread', 'cake', 'carrot', 'cookedcod', 'cookedmutton', 'cookedrabbit', 'cookedsalmon', 'cookie', 'driedkelp', 'goldenapple', 'goldencarrot', 'melonslice', 'mushroomstew', 'poisonouspotato', 'potato', 'steak', 'suspiciousstew', 'sweetberries'];
@@ -251,6 +252,7 @@ function shuffleCards() {
     });
 }
 
+
 function repopulate_board() {
     $('.container').empty();
     for(var i = 0; i < 6; i++) {
@@ -262,11 +264,11 @@ function repopulate_board() {
             card.append(front)
             card.append(back)
             $(row).append(card);
-            console.log('add row')
         }
         $('.container').append(row)
     }
 }
+
 
 function hide() {
     firstCardClicked.removeClass("hidden");
@@ -276,16 +278,18 @@ function hide() {
 
 }
 
+
 function calculateAccuracy() {
     return matches / attempts * 100;
 }
 
+
 function displayStats() {
-    console.log('stats', attempts, games_played, matches)
     $('#attempt-value').text(attempts);
     $('#games-played-value').text(games_played);
     $('#accuracy-value').text(calculateAccuracy().toFixed(2) + '%');
 }
+
 
 function replay() {
     $(".modal").addClass("hidden");
