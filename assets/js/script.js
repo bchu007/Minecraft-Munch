@@ -58,6 +58,7 @@ function resetStats() {
 
 function death() {
     resetStats()
+    displayStats()
     $('.death-modal').addClass('hidden')
     InitalizeApp()
 }
@@ -280,7 +281,8 @@ function hide() {
 
 
 function calculateAccuracy() {
-    return matches / attempts * 100;
+    var accuracy = matches / attempts * 100;
+    return isNaN(accuracy)? 0.0 : (accuracy);
 }
 
 
