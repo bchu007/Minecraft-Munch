@@ -1,6 +1,6 @@
 # Minecraft Munch
 Minecraft Themed Strategy Matching Game
-
+![](https://i.imgur.com/l73ivfg.gifv)
 
 ## How to build
 Fork the repo into your remote computer
